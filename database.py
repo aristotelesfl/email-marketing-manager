@@ -3,11 +3,11 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
 user = "root"
-password = "@r1st0tele5"
-host = "127.0.0.1"
-connection = "level_marketing"
+password = "AR1st0tele5"
+host = "localhost"
+database = "level_marketing"
 
-DATABASE_URL = f'mysql+mysqlconnector://{user}:{password}@{host}/{connection}'
+DATABASE_URL = f'mysql+mysqlconnector://{user}:{password}@{host}/{database}'
 engine = create_engine(DATABASE_URL)
 SessionLocal = sessionmaker(engine)
 
@@ -19,3 +19,5 @@ def get_db():
         yield db
     finally:
         db.close()
+
+    
